@@ -2,7 +2,8 @@ package solid;
 
 public class DependencyInversion {
 	public static void main(String[] args) {
-		
+		Client client = new Client();
+		client.doJob();
 	}
 }
 
@@ -17,7 +18,7 @@ class Client{
 	};
 }
 
-class DataAccess  implements DAO{
+class DataAccess implements DAO{
 	public void execute() {
 		System.out.println("execute");
 	}
